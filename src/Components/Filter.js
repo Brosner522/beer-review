@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Filter = () => {
+const Filter = (props) => {
     return (
         <div>
             <div>
-                <button>Toggle Organic</button>
+                <button onClick= {() => props.handleOrganic()}>Toggle Organic</button>
                 <button>Sort Alphabetical</button>
             </div>
         </div>

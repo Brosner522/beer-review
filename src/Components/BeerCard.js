@@ -27,6 +27,9 @@ class BeerCard extends Component {
                 <div className="location">
                     <div className="header">{this.props.beer.location}</div>
                 </div>
+                <div className="location">
+                    <div className="header">{this.props.beer.rating}★</div>
+                </div>
 
             </div>
 
