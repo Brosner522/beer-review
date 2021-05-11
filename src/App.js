@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import BeerContainer from './BeerContainer';
+
 
 function App() {
   return (
