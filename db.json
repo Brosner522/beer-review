@@ -1,54 +1,76 @@
 {
-    "beers": [
-      {
-        "id": 1,
-        "name": "Brooklyn Lager",
-        "brewing company": "Brooklyn Brewery",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "likes": 5,
-        "comment": ["", ""],
-        "organic": false,
-        "location brewed": "Brooklyn, NY"
-      },
-      {
-        "id": 2,
-        "name": "Slim Hazy",
-        "brewing company": "Peak Brewing",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "organic": true,
-        "location brewed": "Portland, ME"
-      },
-      {
-        "id": 3,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
-        "organic": false,
-        "location brewed": "Brooklyn, NY"
-      },
-      {
-        "id": 4,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
-        "organic": false,
-        "location brewed": "Brooklyn, NY"
-      },
-      {
-        "id": 5,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
-        "organic": false,
-        "location brewed": "Brooklyn, NY"
-      },
-      {
-        "id": 6,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
-        "organic": false,
-        "location brewed": "Brooklyn, NY"
-      }
-    ]
-  }
+  "beers": [
+    {
+      "id": 1,
+      "name": "Brooklyn Lager",
+      "brewing company": "Brooklyn Brewery",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "",
+        ""
+      ],
+      "organic": false,
+      "location brewed": "Brooklyn, NY"
+    },
+    {
+      "id": 2,
+      "name": "Slim Hazy",
+      "brewing company": "Peak Brewing",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "",
+        ""
+      ],
+      "organic": true,
+      "location brewed": "Portland, ME"
+    },
+    {
+      "id": 3,
+      "name": "Brooklyn Lager",
+      "brewing company": "Brooklyn Brewery",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "",
+        ""
+      ],
+      "organic": false,
+      "location brewed": "Brooklyn, NY"
+    },
+    {
+      "id": 4,
+      "name": "Brooklyn Lager",
+      "brewing company": "Brooklyn Brewery",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "",
+        ""
+      ],
+      "organic": false,
+      "location brewed": "Brooklyn, NY"
+    },
+    {
+      "id": 5,
+      "name": "Brooklyn Lager",
+      "brewing company": "Brooklyn Brewery",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "",
+        ""
+      ],
+      "organic": false,
+      "location brewed": "Brooklyn, NY"
+    },
+    {
+      "id": 6,
+      "name": "Brooklyn Lager",
+      "brewing company": "Brooklyn Brewery",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "",
+        ""
+      ],
+      "organic": false,
+      "location brewed": "Brooklyn, NY"
+    }
+  ]
+}
