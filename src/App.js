@@ -16,9 +16,9 @@ class App extends Component {
   componentDidMount() {
     fetch("http://localhost:3001/beers")
       .then(res => res.json())
-      .then(data => console.log(data))
-    // this.setState({
-    //   beers: beers
+      .then(beers => this.setState({
+        beers: beers
+      }))
 
   }
 

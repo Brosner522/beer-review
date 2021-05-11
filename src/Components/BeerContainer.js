@@ -5,8 +5,7 @@ class BeerContainer extends Component {
     render() {
         return (
             <div className={'beerContainer'}>
-                <h1>I am here</h1>
-                {this.props.beers.map(beer => <BeerCard beerObj={beer} />)}
+                {this.props.beers.map(beer => <BeerCard key={beer.id} beer={beer} />)}
             </div>
         )
     }
