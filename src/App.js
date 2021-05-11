@@ -1,27 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
-import BeerContainer from './BeerContainer';
+import BeerContainer from './Components/BeerContainer';
+import { Component } from 'react';
+import Filter from './Components/Filter';
 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+class App extends Component {
+
+  state = {
+    beers: []
+  }
+
+  componentDidMount() {
+    fetch("http://localhost:3001/beers")
+      .then(res => res.json())
+      .then(data => console.log(data))
+    // this.setState({
+    //   beers: beers
+
+  }
+
+  render() {
+    return (
+      <>
+        <Filter />
+        <BeerContainer beers={this.state.beers} />
+      </>
+    );
+  }
 }
 
 export default App;
