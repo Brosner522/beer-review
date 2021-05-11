@@ -5,7 +5,7 @@
         "name": "Brooklyn Lager",
         "brewing company": "Brooklyn Brewery",
         "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "comments": ["", ""],
+        "comments": [ "Very good, extremely fresh.", "Deep, smooth bass notes." ],
         "organic": false,
         "location brewed": "Brooklyn, NY"
       },
@@ -14,7 +14,7 @@
         "name": "Slim Hazy",
         "brewing company": "Peak Brewing",
         "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "comments": ["", ""],
+        "comments": ["Light, bright floral hop nose just borders on perfume.", "Fruit notes are nicely balanced."],
         "organic": true,
         "location brewed": "Portland, ME"
       },
@@ -23,7 +23,7 @@
         "name": "Watermelon Session Ale",
         "brewing company": "Montauk Brewing Company",
         "image": "https://products1.imgix.drizly.com/ci-montauk-watermelon-session-ale-10693946b59344d5.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "comments": ["", ""],
+        "comments": ["More fruity notes of pineapple, mango, and assorted tropical fruit.", "The floral-bordering-on-Noble aroma is unexpected."],
         "organic": false,
         "location brewed": "Montauk, NY"
       },
@@ -32,7 +32,7 @@
         "name": "Modelo Especial",
         "brewing company": "",
         "image": "https://products0.imgix.drizly.com/ci-modelo-especial-440cbc07250fd500.jpeg?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "comments": ["", ""],
+        "comments": ["Well-balanced taste and light hop character with a crisp, clean finish. Modelo Especial is characterized by an orange blossom honey aroma with a hint of herb.", "Really refreshing beer, I liked it."],
         "organic": false,
         "location brewed": "Mexico City, Mexico"
       },
@@ -41,7 +41,7 @@
         "name": "India Pale Ale",
         "brewing company": "Eel River Brewing Co.",
         "image": "https://craftcity.com/image/cache/catalog/catalog/products/Beers/eel_river/eel-river-certified-organic-india-pale-ale-326-550x550.png",
-        "comments": ["", ""],
+        "comments": ["Bright orange and tangerine notes pop on the tongue and quickly give way to rich tropical notes of pineapple.", "Full-spectrum nose offers clear aromas at every frequency—citrus, tropical fruit, light malt."],
         "organic": true,
         "location brewed": "Brooklyn, NY"
       },
@@ -50,7 +50,7 @@
         "name": "Harpoon IPA",
         "brewing company": "Harpoon Brewery",
         "image": "https://www.harpoonbrewery.com/wp-content/uploads/2019/01/IPA-WEB2.jpg",
-        "comments": ["", ""],
+        "comments": ["The aroma quickly evokes sweet orange, tangerine, and clementine, with creamy, gentle fruit notes that would be equally at home in something more hazy.", "Orange-blossom nose, touches of vanilla and honey—smooth, round, cohesive."],
         "organic": false,
         "location brewed": "Boston, MA"
       }
