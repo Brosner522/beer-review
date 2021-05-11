@@ -28,6 +28,12 @@ class App extends Component {
       })
   }
 
+  addBeer = (newBeer) => {
+    this.setState({
+      beers: [...this.state.beers, newBeer]
+    })
+  }
+
   render() {
     return (
       <>
