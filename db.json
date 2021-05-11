@@ -5,8 +5,7 @@
         "name": "Brooklyn Lager",
         "brewing company": "Brooklyn Brewery",
         "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "likes": 5,
-        "comment": ["", ""],
+        "comments": ["", ""],
         "organic": false,
         "location brewed": "Brooklyn, NY"
       },
@@ -15,40 +14,45 @@
         "name": "Slim Hazy",
         "brewing company": "Peak Brewing",
         "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+        "comments": ["", ""],
         "organic": true,
         "location brewed": "Portland, ME"
       },
       {
         "id": 3,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
+        "name": "Watermelon Session Ale",
+        "brewing company": "Montauk Brewing Company",
+        "image": "https://products1.imgix.drizly.com/ci-montauk-watermelon-session-ale-10693946b59344d5.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+        "comments": ["", ""],
         "organic": false,
-        "location brewed": "Brooklyn, NY"
+        "location brewed": "Montauk, NY"
       },
       {
         "id": 4,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
+        "name": "Modelo Especial",
+        "brewing company": "",
+        "image": "https://products0.imgix.drizly.com/ci-modelo-especial-440cbc07250fd500.jpeg?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+        "comments": ["", ""],
         "organic": false,
-        "location brewed": "Brooklyn, NY"
+        "location brewed": "Mexico City, Mexico"
       },
       {
         "id": 5,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
-        "organic": false,
+        "name": "India Pale Ale",
+        "brewing company": "Eel River Brewing Co.",
+        "image": "https://craftcity.com/image/cache/catalog/catalog/products/Beers/eel_river/eel-river-certified-organic-india-pale-ale-326-550x550.png",
+        "comments": ["", ""],
+        "organic": true,
         "location brewed": "Brooklyn, NY"
       },
       {
         "id": 6,
-        "name": "Brooklyn Lager",
-        "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
-        "brewing company": "Brooklyn Brewery",
+        "name": "Harpoon IPA",
+        "brewing company": "Harpoon Brewery",
+        "image": "https://www.harpoonbrewery.com/wp-content/uploads/2019/01/IPA-WEB2.jpg",
+        "comments": ["", ""],
         "organic": false,
-        "location brewed": "Brooklyn, NY"
+        "location brewed": "Boston, MA"
       }
     ]
   }
