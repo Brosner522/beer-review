@@ -4,7 +4,7 @@ import BeerCard from './BeerCard'
 class BeerContainer extends Component {
     render() {
 
-        const organicBeers = this.props.beers.filter(beer => beer.organic === true)
+        // const organicBeers = this.props.beers.filter(beer => beer.organic === true)
         // console.log(filter organic)
         return (
             <div className={'beerContainer'}>

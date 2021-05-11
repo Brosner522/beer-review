@@ -80,6 +80,10 @@ class App extends Component {
     })
   }
 
+  sortByRating = () => {
+    this.state.beers.map(beer => beer.rating)
+  }
+
   render() {
     return (
       <>
@@ -88,7 +92,7 @@ class App extends Component {
         <div className="buttonContainer">
           <button onClick={this.handleClick}>Add a Beer</button>
         </div>
-        <Filter handleOrganic={this.handleOrganic} />
+        <Filter sortByRating={this.sortByRating} handleOrganic={this.handleOrganic} />
         <BeerContainer
           beers={this.beersToShow()}
           // beers={this.state.beers} 
