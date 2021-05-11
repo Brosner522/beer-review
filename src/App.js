@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import BeerContainer from './Components/BeerContainer';
 import { Component } from 'react';
@@ -10,7 +9,8 @@ import Filter from './Components/Filter';
 class App extends Component {
 
   state = {
-    beers: []
+    beers: [],
+    filterOrganic: false
   }
 
   componentDidMount() {
@@ -22,11 +22,21 @@ class App extends Component {
 
   }
 
+  handleOrganic = () => {
+      this.setState({
+       filterOrganic: !this.state.filterOrganic
+      })
+  }
+
   render() {
     return (
       <>
-        <Filter />
-        <BeerContainer beers={this.state.beers} />
+        <Filter handleOrganic={this.handleOrganic} />
+        <BeerContainer 
+          beers={this.state.beers} 
+          handleOrganic={this.handleOrganic}
+          organic={this.state.filterOrganic}
+        />
       </>
     );
   }
