@@ -7,6 +7,7 @@ class BeerContainer extends Component {
             <div className={'beerContainer'}>
                 {this.props.beers.map(beer => <BeerCard key={beer.id} beer={beer} />)}
             </div>
+
         )
     }
 }
