@@ -11,7 +11,12 @@ class BeerContainer extends Component {
 
 
 
-                {this.props.beers.map(beer => <BeerCard key={beer.id} beer={beer} />)}
+                {this.props.beers.map(beer => 
+                <BeerCard 
+                key={beer.id} 
+                beer={beer} 
+                editBeer={this.props.editBeer}
+                />)}
 
 
 
