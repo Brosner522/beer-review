@@ -47,28 +47,17 @@ class App extends Component {
 
   beersToShow = () => {
     let filteredBeers = []
-    const beersToSort = this.state.beers
+    const beersToSort = [...this.state.beers]
 
-    // if (this.state.filterOrganic) {
-    //   filteredBeers = this.state.beers.filter(beer => beer.organic === true)
-    // }
-    console.log("0", this.state.beers)
-    if (this.state.sortRating === true ) { 
-      console.log("1", this.state.beers)
+    if (this.state.filterOrganic) {
+      filteredBeers = this.state.beers.filter(beer => beer.organic === true)
+    }
+   else if (this.state.sortRating === true ) { 
       filteredBeers = beersToSort.sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating))
-      // console.log(beersToSort)
-      console.log("2", this.state.beers)
     }
     else {
       filteredBeers = this.state.beers
     }
-    // else {
-      //   filteredBeers = this.state.beers
-      // }
-
-    // filteredBeers = this.state.filterOrganic === true ? this.state.beers.filter(beer => beer.organic === true) : this.state.beers
-    // console.log("first", this.state.beers)
-    // console.log("second", filteredBeers)
     return filteredBeers
   }
 
