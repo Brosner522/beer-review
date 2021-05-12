@@ -4,10 +4,13 @@ import '../App.css';
 
 class BeerCard extends Component {
 
-    state = {
-        value: '',
-        comments: [this.props.beer.comments],
-        reviewBeer: false
+    constructor(props) {
+        super(props)
+        this.state = {
+            value: '',
+            comments: [...props.beer.comments], //[[]]
+            reviewBeer: false
+        }
     }
 
     handleChange = (e) => {
@@ -16,13 +19,13 @@ class BeerCard extends Component {
         })
     }
 
-    handleSubmit = (e) => {
-        e.preventDefault()
-        const newComment = this.state.value
-        this.setState({
-            comments: [...this.state.comments, newComment]
-        })
-    }
+    // handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     const newComment = this.state.value
+    //     this.setState({
+    //         comments: [...this.state.comments, newComment]
+    //     })
+    // }
 
     reviewBeerSwitch = () => {
         this.setState({
@@ -30,27 +33,37 @@ class BeerCard extends Component {
         })
     }
 
-    editBeer = (beerObj) => {
+    editBeer = (e) => {
+        // debugger
+        e.preventDefault()
+        const newComment = this.state.value
 
-        fetch(`http://localhost:3001/beers/${beerObj.id}`, {
+        // this.setState({
+        //     comments: [...this.state.comments, newComment]
+        // })
+
+        fetch(`http://localhost:3001/beers/${this.props.beer.id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(beerObj),
+            body: JSON.stringify({
+                comments: [...this.props.beer.comments, newComment] //because we are add a comment to already exsiting beer object
+            }),
         })
             .then((res) => res.json())
             .then((beerObj) => {
-                const newComment = this.state.value
-                beerObj.comments = this.state.comments
-                const spreadComments = this.props.beer.comments.push(newComment)
+                // const newComment = this.state.value
+                // beerObj.comments = this.state.comments
+                // const spreadComments = this.props.beer.comments.push(newComment)
                 this.setState({
-                    comments: spreadComments
+                    comments: beerObj.comments
                 })
             })
     }
 
     render() {
+        console.log(this.props.beer.comments, this.state.comments)
         return (
 
 
@@ -59,13 +72,13 @@ class BeerCard extends Component {
                     <button onClick={() => this.reviewBeerSwitch()}>Review this beer</button>
 
                     {this.state.reviewBeer === true ?
-                        <form onSubmit={this.editBeer} onSubmit={this.handleSubmit}>
+                        <form onSubmit={(e) => this.editBeer(e)} >
                             <label>
-                                New Comment:
+                                New Review:
                          <input type="text" value={this.state.value} onChange={this.handleChange} />
 
                             </label>
-                            <input onSubmit={this.editBeer} type="submit" value="submit" />
+                            <input type="submit" value="submit" />
                         </form>
                         :
                         null
@@ -81,7 +94,9 @@ class BeerCard extends Component {
                     <div className="header">{this.props.beer.company}</div>
                 </div>
                 <div className="comments">
-                    <div className="header">{this.state.comments}</div>
+                    <div className="header">
+                        {this.state.comments.map(comment => <li>{comment}</li>)}
+                    </div>
                 </div>
                 <div className="organic">
                     <div className="header">{this.props.beer.organic}</div>

@@ -6,7 +6,7 @@ class BeerForm extends Component {
         name: '',
         company: '',
         image: '',
-        comments: [''],
+        comments: [],
         organic: false,
         location: ''
     }
@@ -25,7 +25,7 @@ class BeerForm extends Component {
             name: '',
             company: '',
             image: '',
-            comments: [''],
+            comments: [],
             organic: '',
             location: ''
             //needs rating
@@ -51,8 +51,6 @@ class BeerForm extends Component {
                     <input onChange={this.handleChange} type="text" name="company" placeholder="Enter brewing company..." className="input-text" />
                     <br />
                     <input onChange={this.handleChange} type="text" name="image" placeholder="Enter the beer's image URL..." className="input-text" />
-                    <br />
-                    <input onChange={this.handleChange} type="text" name="comments" placeholder="Enter a comment..." className="input-text" />
                     <br />
                     <input onChange={this.organicState} type="checkbox" value="organic" className="input-text" />
                     <br />
