@@ -28,6 +28,7 @@ class BeerForm extends Component {
             comments: [''],
             organic: '',
             location: ''
+            //needs rating
         })
         this.props.createBeer(newBeer)
     }

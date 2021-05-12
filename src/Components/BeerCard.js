@@ -9,7 +9,7 @@ class BeerCard extends Component {
 
             <div className={"Card"} width="auto" height="500">
                 <div className="edit-button">
-                    <button onClick={() => this.props.editBeer()}>Review this beer</button>
+                    <button onClick={() => this.props.editBeer(this.props.beer)}>Review this beer</button>
                 </div>
                 <div className="image">
                     <img width="auto" height="300" src={this.props.beer.image} alt="oops" />
