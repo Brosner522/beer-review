@@ -15,8 +15,6 @@ class App extends Component {
     display: false,
     sortRating: false,
     beersDuplicate: [],
-    reviewBeer: false,
-    comments: [""]
   }
 
   componentDidMount() {

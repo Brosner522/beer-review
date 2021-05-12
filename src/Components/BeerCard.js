@@ -6,7 +6,8 @@ class BeerCard extends Component {
 
     state = {
         value: '',
-        comments: [this.props.beer.comments]
+        comments: [this.props.beer.comments],
+        reviewBeer: false
     }
 
     handleChange = (e) => {
@@ -23,22 +24,48 @@ class BeerCard extends Component {
         })
     }
 
+    reviewBeerSwitch = () => {
+        this.setState({
+            reviewBeer: !this.state.reviewBeer
+        })
+    }
+
+    editBeer = (beerObj) => {
+
+        fetch(`http://localhost:3001/beers/${beerObj.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(beerObj),
+        })
+            .then((res) => res.json())
+            .then((beerObj) => {
+                const newComment = this.state.value
+                beerObj.comments = this.state.comments
+                const spreadComments = this.props.beer.comments.push(newComment)
+                this.setState({
+                    comments: spreadComments
+                })
+            })
+    }
+
     render() {
         return (
 
 
             <div className={"Card"} width="auto" height="500">
                 <div className="edit-button">
-                    <button onClick={() => this.props.editBeer(this.props.beer)}>Review this beer</button>
+                    <button onClick={() => this.reviewBeerSwitch()}>Review this beer</button>
 
-                    {this.props.reviewBeer === true ?
-                        <form onSubmit={this.handleSubmit}>
+                    {this.state.reviewBeer === true ?
+                        <form onSubmit={this.editBeer} onSubmit={this.handleSubmit}>
                             <label>
                                 New Comment:
                          <input type="text" value={this.state.value} onChange={this.handleChange} />
 
                             </label>
-                            <input type="submit" value="submit" />
+                            <input onSubmit={this.editBeer} type="submit" value="submit" />
                         </form>
                         :
                         null
