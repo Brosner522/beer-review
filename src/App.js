@@ -13,21 +13,32 @@ class App extends Component {
     beers: [],
     filterOrganic: false,
     display: false,
-    sortRating: false
+    sortRating: false,
+    beersDuplicate: [],
+    reviewBeer: false,
+    comments: [""]
   }
 
   componentDidMount() {
     fetch("http://localhost:3001/beers")
       .then(res => res.json())
       .then(beers => this.setState({
-        beers: beers
-      }))
-
+        beers: beers,
+        beersDuplicate: beers
+      })
+      )
   }
+
 
   handleOrganic = () => {
     this.setState({
       filterOrganic: !this.state.filterOrganic
+    })
+  }
+
+  addBeer = (newBeer) => {
+    this.setState({
+      beers: [...this.state.beers, newBeer]
     })
   }
 
@@ -37,59 +48,48 @@ class App extends Component {
     })
   }
 
-
-  addBeer = (newBeer) => {
-    this.setState({
-      beers: [...this.state.beers, newBeer]
-    })
-  }
-
-  // sortBeers = (sortBy) => {
-  //   this.setState({
-  //     sort: sortBy,
-  //     beers: this.state.beers.sort(
-  //       (a,b) => sortBy === "rating" ? a.rating - b.rating : null
-  //     )
-  //   })
-  // }
-
-  // sortBeers = () => {
-  //   this.setState({
-  //     beers: this.state.beers.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)),
-  //     sortRating: !this.state.sortRating
-  //   })
-  // }
-
   beersToShow = () => {
     let filteredBeers = []
+    const beersToSort = [...this.state.beers]
+
     if (this.state.filterOrganic) {
       filteredBeers = this.state.beers.filter(beer => beer.organic === true)
     }
     else if (this.state.sortRating === true) {
-      filteredBeers = this.state.beers.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
+      filteredBeers = beersToSort.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
     }
     else {
       filteredBeers = this.state.beers
     }
-
-
-
     return filteredBeers
   }
+  //Map over array od comments
+  // Return new array wiith added comment from user submission.
 
 
-  // editBeer = (beers) => {
-  //   const beerId = {beers.id}
+  editBeer = (beer) => {
+    const beerComments = [...beer.comments /* ,new comment */]
+    fetch(`http://localhost:3001/beers/${beer.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(beer),
+    })
+      .then((res) => res.json())
+      .then((beerObj) => {
+        console.log(beerComments)
+        this.setState({
+          reviewBeer: !this.state.reviewBeer,
+          comments: beerObj.comments
+        })
+      })
+  }
 
-  //   fetch(`http://localhost:3001/beers/${beers.id}`, {
-  //     method: "PATCH",
-  //     headers: {
-  //       "Content-Type" : "application/json",
-  //     },
-  //     body: JSON.stringify(beers),
+  // addComment = () => {
+  //   this.setState({
+  //     comments: [...beers.comments]
   //   })
-  //   .then((res) => res.json())
-  //   .then((beerObj) => console.log(beerObj))
   // }
 
   createBeer = (newBeer) => {
@@ -120,7 +120,6 @@ class App extends Component {
     })
   }
 
-
   render() {
     return (
       <><h1>Beer Reviews</h1>
@@ -129,17 +128,16 @@ class App extends Component {
         <div className="buttonContainer">
           <button onClick={this.handleClick}>Add a Beer</button>
         </div>
+
         <Filter
           handleOrganic={this.handleOrganic}
           sortBeers={this.sortBeers}
         />
 
         <BeerContainer
+          reviewBeer={this.state.reviewBeer}
           editBeer={this.editBeer}
           beers={this.beersToShow()}
-          // beers={this.state.beers} 
-          handleOrganic={this.handleOrganic}
-          organic={this.state.filterOrganic}
         />
       </>
     );
