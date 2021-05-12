@@ -14,7 +14,9 @@ class App extends Component {
     filterOrganic: false,
     display: false,
     sortRating: false,
-    beersDuplicate: []
+    beersDuplicate: [],
+    reviewBeer: false,
+    comments: [""]
   }
 
   componentDidMount() {
@@ -23,9 +25,11 @@ class App extends Component {
       .then(beers => this.setState({
         beers: beers,
         beersDuplicate: beers
+       
       }))
 
   }
+
 
   handleOrganic = () => {
     this.setState({
@@ -60,8 +64,12 @@ class App extends Component {
     }
     return filteredBeers
   }
+//Map over array od comments
+// Return new array wiith added comment from user submission.
 
-  editBeer = (beer) => {
+
+editBeer = (beer) => {
+  const beerComments = [...beer.comments /* ,new comment */ ]
     fetch(`http://localhost:3001/beers/${beer.id}`, {
       method: "PATCH",
       headers: {
@@ -70,8 +78,20 @@ class App extends Component {
       body: JSON.stringify(beer),
     })
     .then((res) => res.json())
-    .then((beerObj) => console.log(beerObj))
+    .then((beerObj) => { 
+      console.log(beerComments)
+      this.setState({
+        reviewBeer: !this.state.reviewBeer,
+        comments: beerObj.comments
+      })
+    })
   }
+
+  // addComment = () => {
+  //   this.setState({
+  //     comments: [...beers.comments]
+  //   })
+  // }
 
   createBeer = (newBeer) => {
     const reqMethod = {
@@ -109,12 +129,14 @@ class App extends Component {
         <div className="buttonContainer">
           <button onClick={this.handleClick}>Add a Beer</button>
         </div>
+
         <Filter  
         handleOrganic={this.handleOrganic} 
         sortBeers={this.sortBeers}
         />
 
         <BeerContainer
+        reviewBeer={this.state.reviewBeer}
           editBeer={this.editBeer}
           beers={this.beersToShow()} 
         />

@@ -3,6 +3,19 @@ import '../App.css';
 
 
 class BeerCard extends Component {
+
+
+    state ={
+        value: ""
+    }
+    
+    handlechange(event) {
+        this.setState({
+            value: event.target.value
+        })
+    }
+
+
     render() {
         return (
 
@@ -10,6 +23,22 @@ class BeerCard extends Component {
             <div className={"Card"} width="auto" height="500">
                 <div className="edit-button">
                     <button onClick={() => this.props.editBeer(this.props.beer)}>Review this beer</button>
+                    
+                    {this.props.reviewBeer === true ? 
+                   <form>
+                        <label>
+                            New Comment:
+                         <input 
+                         type="text" 
+                         handleChange={this.handleChange}
+                         value={this.state.value}
+                         name="review" /> 
+                    </label>
+                        <input onClick={() => this.props.addComment()} type="submit" value="submit" />
+                    </form> 
+                    :
+                    null
+                    } 
                 </div>
                 <div className="image">
                     <img width="auto" height="300" src={this.props.beer.image} alt="oops" />

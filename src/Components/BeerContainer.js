@@ -16,6 +16,7 @@ class BeerContainer extends Component {
                 key={beer.id} 
                 beer={beer} 
                 editBeer={this.props.editBeer}
+                reviewBeer={this.props.reviewBeer}
                 />)}
 
 
