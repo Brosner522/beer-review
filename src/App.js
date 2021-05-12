@@ -31,11 +31,11 @@ class App extends Component {
     })
   }
 
-  // sortBeers = () => {
-  //   this.setState({
-  //     sortRating: !this.state.sortRating
-  //   })
-  // }
+  sortBeers = () => {
+    this.setState({
+      sortRating: !this.state.sortRating
+    })
+  }
 
 
   addBeer = (newBeer) => {
@@ -53,43 +53,44 @@ class App extends Component {
   //   })
   // }
 
-  sortBeers = () => {
-    this.setState({
-        beers: this.state.beers.sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating)),
-      sortRating: !this.state.sortRating
-    })
-  }
+  // sortBeers = () => {
+  //   this.setState({
+  //     beers: this.state.beers.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating)),
+  //     sortRating: !this.state.sortRating
+  //   })
+  // }
 
   beersToShow = () => {
     let filteredBeers = []
     if (this.state.filterOrganic) {
       filteredBeers = this.state.beers.filter(beer => beer.organic === true)
     }
+    else if (this.state.sortRating === true) {
+      filteredBeers = this.state.beers.sort((a, b) => parseFloat(b.rating) - parseFloat(a.rating))
+    }
     else {
       filteredBeers = this.state.beers
     }
-    // else if (this.state.sortRating === true ) { filteredBeers = this.state.beers.sort((a,b) => parseFloat(b.rating) - parseFloat(a.rating))
-    // }
-    // else {
-      //   filteredBeers = this.state.beers
-      // }
 
-    // filteredBeers = this.state.filterOrganic === true ? this.state.beers.filter(beer => beer.organic === true) : this.state.beers
+
+
     return filteredBeers
   }
-  editBeer = (beers) => {
-    const beerId = {beers.id}
 
-    fetch(`http://localhost:3001/beers/${beers.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type" : "application/json",
-      },
-      body: JSON.stringify(beers),
-    })
-    .then((res) => res.json())
-    .then((beerObj) => console.log(beerObj))
-  }
+
+  // editBeer = (beers) => {
+  //   const beerId = {beers.id}
+
+  //   fetch(`http://localhost:3001/beers/${beers.id}`, {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type" : "application/json",
+  //     },
+  //     body: JSON.stringify(beers),
+  //   })
+  //   .then((res) => res.json())
+  //   .then((beerObj) => console.log(beerObj))
+  // }
 
   createBeer = (newBeer) => {
     const reqMethod = {
@@ -128,9 +129,9 @@ class App extends Component {
         <div className="buttonContainer">
           <button onClick={this.handleClick}>Add a Beer</button>
         </div>
-        <Filter  
-        handleOrganic={this.handleOrganic} 
-        sortBeers={this.sortBeers}
+        <Filter
+          handleOrganic={this.handleOrganic}
+          sortBeers={this.sortBeers}
         />
 
         <BeerContainer
