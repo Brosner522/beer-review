@@ -67,14 +67,13 @@ class BeerCard extends Component {
         return (
 
 
-            <div className={"Card"} width="auto" height="500">
+            <div className="card" width="auto" height="500">
                 <div className="edit-button">
                     <button onClick={() => this.reviewBeerSwitch()}>Review this beer</button>
 
                     {this.state.reviewBeer === true ?
                         <form onSubmit={(e) => this.editBeer(e)} >
                             <label>
-                                New Review:
                          <input type="text" value={this.state.value} onChange={this.handleChange} />
 
                             </label>

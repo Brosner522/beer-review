@@ -1,4 +1,43 @@
+h1 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
 .image {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
+.body {
+  background-image: url("https://st4.depositphotos.com/26169778/31394/i/600/depositphotos_313943142-stock-photo-beer-samplers-small-glasses-individually.jpg");
+  background-attachment: fixed;
+  /* background-repeat: no-repeat;
+    background-size: auto; */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome-bar {
+    border: 5px solid rgba(212, 121, 1, 0.842);
+    color: white;
+  font-weight: bold;
+  text-align: center;
+  background: black;
+}
+
+
+
+.card {
+  border-radius: 25px;
+  text-align: center;
+  padding: 50px;
+  margin: 50px;
+  list-style-position: inside;
+  border: 5px solid rgba(212, 121, 1, 0.842);
+  display: inline-block;
+  background: linear-gradient(rgb(102, 95, 95), rgba(212, 121, 1, 0.842));
+  vertical-align: middle;
+  align-content: center;
+  flex-wrap: wrap;
+}
