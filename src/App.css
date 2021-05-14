@@ -1,3 +1,5 @@
+
+
 h1 {
   color: white;
   font-weight: bold;
@@ -5,7 +7,11 @@ h1 {
 }
 .image {
   border-radius: 8px;
+  padding-bottom: 10px;
+    padding-top: 10px;
 }
+
+
 
 .body {
   background-image: url("https://st4.depositphotos.com/26169778/31394/i/600/depositphotos_313943142-stock-photo-beer-samplers-small-glasses-individually.jpg");
@@ -23,15 +29,22 @@ h1 {
     color: white;
   font-weight: bold;
   text-align: center;
-  background: black;
+  background: rgba(212, 121, 1, 0.5);
 }
 
-
+.beerContainer {
+  text-align: center;
+}
 
 .card {
+  overflow-y: scroll;
+  height: 500px;
+  width: 15%;
   border-radius: 25px;
   text-align: center;
   padding: 50px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   margin: 50px;
   list-style-position: inside;
   border: 5px solid rgba(212, 121, 1, 0.842);
@@ -40,4 +53,38 @@ h1 {
   vertical-align: middle;
   align-content: center;
   flex-wrap: wrap;
+}
+
+div.name {
+  font-size: larger;
+}
+
+div.company {
+  padding-bottom: 5px;
+}
+
+div.comments {
+  font-style: italic;
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+
+div.location {
+  padding-bottom: 5px;
+}
+
+input[type="button"] {
+  color: black;
+    background-color: #f6c001;
+    margin: 4px;
+    border-radius: 10px;
+    font-weight: bolder;
+}
+
+.button {
+  color: black;
+    background-color: #f6c001;
+    margin: 4px;
+    border-radius: 10px;
+    font-weight: bolder;
 }

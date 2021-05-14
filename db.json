@@ -79,6 +79,31 @@
       "organic": false,
       "location": "Boston, MA",
       "rating": 10
+    },
+    {
+      "name": "Hangar 24",
+      "company": "Craft Brewery",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOMoqByGDHgqneKJfuPdB4hs3-eEs7gz06pQ&usqp=CAU",
+      "comments": [
+        "Perfectly average",
+        "Reminds me of college"
+      ],
+      "organic": false,
+      "location": "California",
+      "rating": "6",
+      "id": 7
+    },
+    {
+      "name": "Miller Light",
+      "company": "Miller Brewing Company",
+      "image": "https://asset.bloomnation.com/b_rgb:ffffff,c_pad,d_vendor:global:catalog:product:placeholder.png,dpr_2.0,f_auto,fl_preserve_transparency,q_auto/v1606373115/vendor/100055/catalog/product/f/f/ff1667134fdbc53bf59d98c6deb948b1_5fbede79a1a79.jpg",
+      "comments": [
+        "Better than Bud Light, but what isn't nowadays"
+      ],
+      "organic": false,
+      "location": "Milwaukee, Wisconsin",
+      "rating": "5",
+      "id": 8
     }
   ]
 }
