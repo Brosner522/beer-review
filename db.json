@@ -74,7 +74,8 @@
       "image": "https://www.harpoonbrewery.com/wp-content/uploads/2019/01/IPA-WEB2.jpg",
       "comments": [
         "The aroma quickly evokes sweet orange, tangerine, and clementine, with creamy, gentle fruit notes that would be equally at home in something more hazy.",
-        "Orange-blossom nose, touches of vanilla and honey—smooth, round, cohesive."
+        "Orange-blossom nose, touches of vanilla and honey—smooth, round, cohesive.",
+        "I've had this and its actually overrated"
       ],
       "organic": false,
       "location": "Boston, MA",
@@ -104,6 +105,40 @@
       "location": "Milwaukee, Wisconsin",
       "rating": "5",
       "id": 8
+    },
+    {
+      "name": "Cool Kids Juicy IPA",
+      "company": "Calicraft Brewing Co",
+      "image": "https://images.squarespace-cdn.com/content/v1/5723eb3f7da24f738c3a41bc/1582828032025-0DTPZ5V70O1K7VTYE2K7/ke17ZwdGBToddI8pDm48kK60W-ob1oA2Fm-j4E_9NQB7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0peuRriT5ozTlIv33RH5i-rgoxFbWdTFwwOOwb-LfzCHccfKZtuu0_3JXB1avmQYUg/Cool+Kidz.png?format=2500w",
+      "comments": [],
+      "organic": true,
+      "location": "California",
+      "rating": "7",
+      "id": 9
+    },
+    {
+      "name": "Flatiron Beer",
+      "company": "Flatiron",
+      "image": "https://products2.imgix.drizly.com/ci-brooklyn-lager-08ea28033c2af01a.png?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20",
+      "comments": [
+        "Not too bad"
+      ],
+      "organic": true,
+      "location": "UWS",
+      "rating": "9",
+      "id": 10
+    },
+    {
+      "name": "Stone IPA",
+      "company": "Stone Brewing",
+      "image": "https://dydza6t6xitx6.cloudfront.net/ci-stone-ipa-4f94fc4e6ce01683.jpeg",
+      "comments": [
+        "Very strong but good"
+      ],
+      "organic": true,
+      "location": "California",
+      "rating": "4",
+      "id": 11
     }
   ]
 }
