@@ -83,9 +83,9 @@ class BeerCard extends Component {
                         null
                     }
                 </div>
-                <div className="image">
+                
                     <img width="auto" height="300" src={this.props.beer.image} alt="oops" />
-                </div>
+                
                 <div className="name">
                     <div className="header">{this.props.beer.name}</div>
                 </div>

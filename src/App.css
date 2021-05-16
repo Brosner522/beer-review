@@ -10,8 +10,8 @@ h1 {
 .body {
   background-image: url("https://st4.depositphotos.com/26169778/31394/i/600/depositphotos_313943142-stock-photo-beer-samplers-small-glasses-individually.jpg");
   background-attachment: fixed;
-  /* background-repeat: no-repeat;
-    background-size: auto; */
+  background-repeat: no-repeat;
+    background-size: auto;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -40,4 +40,5 @@ h1 {
   vertical-align: middle;
   align-content: center;
   flex-wrap: wrap;
+  font-weight: bold;
 }
