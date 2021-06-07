@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 class BeerForm extends Component {
 
@@ -58,7 +59,7 @@ class BeerForm extends Component {
                     <br />
                     <input onChange={this.handleChange} type="text" name="rating" placeholder="Please submit rating..." className="input-text" />
                     <br />
-                    <input onClick={this.createBeer} type="submit" name="submit" value="Submit" className="submit" />
+                    <input onClick={this.createBeer} type="submit" name="submit" value="Submit" className="button" />
                 </form>
             </div>
         );

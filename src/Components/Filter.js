@@ -5,11 +5,8 @@ const Filter = (props) => {
 
     <div className="button-container">
       <div>
-
-        <button onClick={() => props.handleOrganic()}>Toggle Organic</button>
-        
-        <button onClick={() => props.sortBeers()}> Sort by rating</button>
-
+        <button className={'button'} onClick={() => props.handleOrganic()}>Toggle Organic</button>
+        <button className={'button'} onClick={() => props.sortBeers()}> Sort by rating</button>
       </div>
     </div>
     

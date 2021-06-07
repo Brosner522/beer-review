@@ -69,23 +69,23 @@ class BeerCard extends Component {
 
             <div className="card" width="auto" height="500">
                 <div className="edit-button">
-                    <button onClick={() => this.reviewBeerSwitch()}>Review this beer</button>
+                    <button className={'button'} onClick={() => this.reviewBeerSwitch()}>Review this beer</button>
 
                     {this.state.reviewBeer === true ?
                         <form onSubmit={(e) => this.editBeer(e)} >
                             <label>
-                         <input type="text" value={this.state.value} onChange={this.handleChange} />
+                                <input type="text" value={this.state.value} onChange={this.handleChange} />
 
                             </label>
-                            <input type="submit" value="submit" />
+                            <input className={'button'} type="submit" value="submit" />
                         </form>
                         :
                         null
                     }
                 </div>
-                
-                    <img width="auto" height="300" src={this.props.beer.image} alt="oops" />
-                
+                <div className="image">
+                    <img width="200" height="300" src={this.props.beer.image} alt="oops" />
+                </div>
                 <div className="name">
                     <div className="header">{this.props.beer.name}</div>
                 </div>
@@ -94,14 +94,14 @@ class BeerCard extends Component {
                 </div>
                 <div className="comments">
                     <div className="header">
-                        {this.state.comments.map(comment => <li>{comment}</li>)}
+                        {this.state.comments.map(comment => <li>{`"${comment}"`}</li>)}
                     </div>
                 </div>
                 <div className="organic">
                     <div className="header">{this.props.beer.organic}</div>
                 </div>
                 <div className="location">
-                    <div className="header">{this.props.beer.location}</div>
+                    <div className="header">{`Brewed in ${this.props.beer.location}`}</div>
                 </div>
                 <div className="location">
                     <div className="header">{this.props.beer.rating}★</div>
