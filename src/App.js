@@ -3,8 +3,6 @@ import BeerContainer from "./Components/BeerContainer";
 import { Component } from "react";
 import Filter from "./Components/Filter";
 import BeerForm from "./Components/BeerForm";
-import { BrowserRouter, Route } from 'react-router-dom';
-
 
 class App extends Component {
   state = {
@@ -61,11 +59,9 @@ class App extends Component {
     }
     return filteredBeers;
   };
-  //Map over array od comments
-  // Return new array wiith added comment from user submission.
 
   editBeer = (beer) => {
-    const beerComments = [...beer.comments /* ,new comment */];
+    const beerComments = [...beer.comments];
     fetch(`http://localhost:3001/beers/${beer.id}`, {
       method: "PATCH",
       headers: {
@@ -117,34 +113,17 @@ class App extends Component {
 
   render() {
     return (
-
-      // <BrowserRouter>
-
       <div className={"body"}>
-
-        {/* <Route path='/BeerForm' render={() => <BeerForm createBeer={this.createBeer} />} />
-
-          <Route path='/Filter' render={() => <Filter
-            handleOrganic={this.handleOrganic}
-            sortBeers={this.sortBeers}
-          />} />
-          <Route path='/BeerContainer' render={() => <BeerContainer
-            reviewBeer={this.state.reviewBeer}
-            editBeer={this.editBeer}
-            beers={this.beersToShow()}
-          />} /> */}
-
-
         <div className={"welcome-bar"}>
-          <h1>Beer Reviews</h1>
+          <h1>The Beer Review</h1>
           {this.state.display ? (
             <BeerForm createBeer={this.createBeer} />
           ) : null}
           <div className="button-container">
-            <button className={'button'} onClick={this.handleClick}>Add a Beer</button>
+            <button className={"button"} onClick={this.handleClick}>
+              Add a Beer
+            </button>
           </div>
-
-
 
           <Filter
             handleOrganic={this.handleOrganic}
@@ -158,9 +137,6 @@ class App extends Component {
           beers={this.beersToShow()}
         />
       </div>
-
-      // </BrowserRouter>
-
     );
   }
 }
